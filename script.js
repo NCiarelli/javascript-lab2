@@ -8,3 +8,18 @@ const chooseOption = (opt1, opt2) => {
 };
 
 // attackPlayer: a function to apply random damage to the passed "health" value using randomDamage()
+const attackPlayer = function(health) {
+  return health - randomDamage();
+};
+
+// logHealth: a message printing function that prints the current health of a player to the console.
+const logHealth = (player, health) => {
+  console.log(`${player} health: ${health}`);
+};
+
+// logDeath: a message printing function that prints to the console a winner defeating a loser
+const logDeath = (winner, loser) => {
+  console.log(`${winner} defeated ${loser}`);
+};
+
+// isDead
