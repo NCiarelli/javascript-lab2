@@ -27,4 +27,27 @@ const isDead = health => {
   return health <= 0;
 };
 
-// fight
+// fight: a function to run a fight between two players. Requires two player names and their associated starting health values
+function fight(player1, player2, player1Health, player2Health) {
+  while (true) {
+    let attacker = chooseOption(player1, player2);
+    if (attacker === player1) {
+      player2Health = attackPlayer(player2Health);
+      logHealth(player2, player2Health);
+      if (isDead(player2Health)) {
+        logDeath(player1, player2);
+        break;
+      }
+    } else {
+      player1Health = attackPlayer(player1Health);
+      logHealth(player1, player1Health);
+      if (isDead(player1Health)) {
+        logDeath(player2, player1);
+        break;
+      }
+    }
+  }
+}
+
+// Call the fight function to display a test case, a totally legit test case
+fight("Nick", "David", 2000, 50);

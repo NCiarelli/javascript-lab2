@@ -139,7 +139,7 @@
     });
   });
 
-  xdescribe("fight", function() {
+  describe("fight", function() {
     const PLAYER1 = 2,
       PLAYER2 = 9;
 
