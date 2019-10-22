@@ -22,4 +22,9 @@ const logDeath = (winner, loser) => {
   console.log(`${winner} defeated ${loser}`);
 };
 
-// isDead
+// isDead: a function to return the result of a boolean expression if a player's health reaches 0 or below
+const isDead = health => {
+  return health <= 0;
+};
+
+// fight
